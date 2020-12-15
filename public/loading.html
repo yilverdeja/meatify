@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+        
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-auth.js"></script>
+        
+    <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQ86-bEZ1RUu2sQ6LC5T7I1xSdhVnnkms",
+            authDomain: "meatify-f611b.firebaseapp.com",
+            projectId: "meatify-f611b",
+            storageBucket: "meatify-f611b.appspot.com",
+            messagingSenderId: "215868710360",
+            appId: "1:215868710360:web:df98ece197339b533b66ad",
+            measurementId: "G-RLHBGDCTD6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMTJB2K6WE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PMTJB2K6WE');
+    </script>
+        
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -30,15 +66,10 @@
         <!-- Start: Main Wrapper -->
         <div class="d-flex align-items-center main-wrapper flex-fill">
             <div class="container d-flex justify-content-center justify-content-xl-center">
-                <div class="login-clean">
-                    <form class="shadow-lg" method="post">
-                        <h2 class="sr-only">Login Form</h2>
-                        <div class="illustration"><i class="fas fa-location-arrow" style="border-style: none;"></i></div>
-                        <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email"></div>
-                        <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-                        <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a class="forgot" href="#">Forgot your email or password?</a>
-                    </form>
-                </div>
+                <!-- Start: Loading Wrapper -->
+                <div class="text-center login-clean"><span class="spinner-border" role="status" style="width: 128px;height: 128px;border-style: solid;color: rgb(230,103,103);"></span>
+                    <p class="lead" style="margin-top: 16px;"><span id="loadingText">Analyzing data</span>...</p>
+                </div><!-- End: Loading Wrapper -->
             </div>
         </div><!-- End: Main Wrapper -->
         <!-- Start: Footer Wrapper -->

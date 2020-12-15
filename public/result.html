@@ -10,6 +10,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+        
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.0/firebase-auth.js"></script>
+        
+    <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCQ86-bEZ1RUu2sQ6LC5T7I1xSdhVnnkms",
+            authDomain: "meatify-f611b.firebaseapp.com",
+            projectId: "meatify-f611b",
+            storageBucket: "meatify-f611b.appspot.com",
+            messagingSenderId: "215868710360",
+            appId: "1:215868710360:web:df98ece197339b533b66ad",
+            measurementId: "G-RLHBGDCTD6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PMTJB2K6WE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PMTJB2K6WE');
+    </script>
+        
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -29,19 +65,20 @@
         </nav><!-- End: Navigation Clean -->
         <!-- Start: Main Wrapper -->
         <div class="d-flex align-items-center main-wrapper flex-fill">
-            <div class="container d-flex">
+            <div class="container d-flex justify-content-center align-items-center">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-7 text-center text-md-left d-flex justify-content-center align-items-center">
                         <!-- Start: Info Wrapper -->
                         <div>
-                            <h1 class="display-3">Meatify</h1>
-                            <p class="lead">Personalize your meat eating experience for a balanced diet<br></p>
-                            <p>Using State-of-the-Art Artificial Intelligence, Quantum &amp; Cloud Computing, and Blockchain, Meatify is disrupting the meat eating industry<br></p><a class="btn btn-primary btn-lg" role="button" href="sample.html"><strong>Try Now</strong></a>
+                            <h1 class="display-3">Chicken Breast</h1>
+                            <p class="lead">Have you given Chicken Breast's a try?<br></p>
+                            <p>Fun Fact: <span id="chickenBreastFunFact">This type of poultry is an excellent source of lean protein!</span><br></p>
+                            <div class="btn-group d-flex flex-column flex-lg-row" role="group" style="margin: 0px;margin-right: 0px;"><a class="btn btn-outline-primary" role="button" style="margin: 5px;margin-right: 5px;margin-left: 5px;">Order Chicken Breasts</a><a id="recipeOfTheDay" class="btn btn-primary" role="button" style="margin: 5px;margin-right: 5px;margin-left: 5px;" href="https://www.gimmesomeoven.com/baked-chicken-breast/">Recipe of the Day</a></div>
                         </div><!-- End: Info Wrapper -->
                     </div>
                     <div class="col-12 col-md-6 col-lg-5 d-none d-md-flex justify-content-center align-items-center">
                         <!-- Start: Image Wrapper -->
-                        <div><img class="img-fluid" src="assets/img/undraw_barbecue_3x93%201.svg"></div><!-- End: Image Wrapper -->
+                        <div><img class="img-fluid" src="assets/img/undraw_diet_ghvw.svg"></div><!-- End: Image Wrapper -->
                     </div>
                 </div>
             </div>
