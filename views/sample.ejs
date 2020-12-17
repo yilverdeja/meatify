@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+<!-- Start: Main Wrapper -->
+<div class="d-flex align-items-center main-wrapper flex-fill">
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-7 text-center text-md-left d-none d-md-flex justify-content-center align-items-center">
+                <!-- Start: Image Wrapper -->
+                <div><img class="img-fluid" src="/img/undraw_Hamburger_8ge6.svg"></div><!-- End: Image Wrapper -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center align-items-center">
+                <!-- Start: Form Wrapper -->
+                <div class="d-flex justify-content-center align-items-center justify-content-lg-center">
+                    <!-- Start: Sample Form -->
+                    <form class="shadow-lg d-flex flex-column justify-content-center align-items-center align-items-lg-start" method="post" style="background: #ffffff;padding: 20px;border-radius: 15px;">
+                        <div class="form-group" style="min-width: 100%;"><label for="redMeatInput">How often in a week do you eat Red Meat?</label><input class="form-control" type="number" id="redMeatInput" min="0" max="21" step="1" placeholder="3" required=""><small class="text-muted">Red Meat is all types of livestock such as beef, pork, goat and lamb</small></div>
+                        <div class="form-group" style="min-width: 100%;"><label for="poultryMeatInput">How often in a week do you eat Poultry?</label><input class="form-control" type="number" id="poultryMeatInput" min="0" max="21" step="1" placeholder="3" required=""><small class="text-muted">Poultry includes Chicken and Turkey</small></div>
+                        <div class="form-group" style="min-width: 100%;"><label for="seafoodMeatInput">How often in a week do you eat Seafood?</label><input class="form-control" type="number" id="seafoodMeatInput" min="0" max="21" step="1" placeholder="3" required=""><small class="text-muted">Seafood includes fish, crustaceans (crab and lobster) and molluscs (clambs, oysters, scallops and mussels)</small></div><button class="btn btn-outline-primary" type="submit">Submit</button>
+                    </form><!-- End: Sample Form -->
+                </div><!-- End: Form Wrapper -->
+            </div>
+        </div>
+    </div>
+</div><!-- End: Main Wrapper -->
+<%- include("partials/footer"); -%>

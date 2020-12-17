@@ -1,0 +1,32 @@
+{
+  "name": "meatify",
+  "version": "1.0.0",
+  "description": "meatify app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yil Verdeja",
+  "license": "ISC",
+  "dependencies": {
+    "base64json": "^1.0.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.4.2",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yilverdeja/meatify.git"
+  },
+  "keywords": [
+    "meatify"
+  ],
+  "bugs": {
+    "url": "https://github.com/yilverdeja/meatify/issues"
+  },
+  "homepage": "https://github.com/yilverdeja/meatify#readme"
+}

@@ -1,0 +1,29 @@
+<%- include("partials/header"); -%>
+<!-- Start: Main Wrapper -->
+<div class="d-flex align-items-center main-wrapper flex-fill">
+    <div class="container d-flex justify-content-center justify-content-xl-center">
+        <!-- Start: Loading Wrapper -->
+        <div class="text-center login-clean"><span class="spinner-border" role="status" style="width: 128px;height: 128px;border-style: solid;color: rgb(230,103,103);"></span>
+            <p class="lead" style="margin-top: 16px;"><span id="loadingText">Analyzing Data</span>...</p>
+        </div><!-- End: Loading Wrapper -->
+    </div>
+</div><!-- End: Main Wrapper -->
+<!-- Show's X different loading texts every 2 seconds -->
+<script>
+    var numIntervals = 5;
+    var intervalTime = 500;
+    updateLoadingText();
+    setInterval(() => {
+        if (numIntervals <= 0) {
+            window.location = "/result";
+        }
+        updateLoadingText();
+        numIntervals = numIntervals - 1;
+    }, intervalTime);
+    
+    function updateLoadingText(){
+        var arr = <%- JSON.stringify(loadingTexts) %>;
+        document.getElementById("loadingText").innerHTML = arr[Math.floor(Math.random() * arr.length)]
+    }
+</script>
+<%- include("partials/footer"); -%>
