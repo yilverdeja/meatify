@@ -2,7 +2,6 @@ require('dotenv').config();
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const express = require("express");
-const base64json = require('base64json');
 
 const admin = require("firebase-admin");
 const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS);
@@ -22,8 +21,6 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
-
-// TODO: read once from the database and store that information in the backend
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -46,6 +43,7 @@ app.get("/result", (req, res) => {
   let subtitleArray = ["Have you tried Chicken Breast?", "Have you given Chicken Breast a try?", "What about Chicken Breast?", "Chicken Breast fits your needs", "It looks like you may need some Chicken Breast", "Chicken Breast needs you", "Poultry is the best choice", "Chicken Breast is the best choice"];
   let subtitle = subtitleArray[Math.floor(Math.random() * subtitleArray.length)]
 
+  // before rendering the page, get all the necessary information first that will be used in the page
   const getResultText = async() => {
     let fact = getRandomItemInCollection("facts", "fact");
     let recipe = getRandomItemInCollection("recipes", "recipe");
@@ -54,7 +52,6 @@ app.get("/result", (req, res) => {
   }
 
   getResultText().then(data => {
-    
     res.render("result", {funFact: data[0], recipeOfTheDay: data[1], subtitle: subtitle})
   });
 
