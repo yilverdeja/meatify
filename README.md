@@ -13,3 +13,6 @@ Start the server
 ```
 node app.js
 ```
+
+## Disclaimer
+This is not a real website, it's for a joke. Your information is not collected and stored. Additionally, no chickens were harmed in the making of this website.
