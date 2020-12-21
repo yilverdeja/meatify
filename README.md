@@ -7,7 +7,7 @@ The idea came from a friend who wanted to find a way to promote more Chicken Bre
 ## Setup
 Setup the node modules
 ```
-npm init
+npm install
 ```
 Start the server
 ```
