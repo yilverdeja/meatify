@@ -13,13 +13,16 @@
                         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                     </ul><!-- End: Links -->
                     <!-- Start: Copyright -->
-                    <p class="copyright">Meatify © 2020, Designed by <a href="https://www.yve.life" target="_blank">yve.</a></p><!-- End: Copyright -->
+                    <p class="copyright">Meatify &copy; <span id="footerYear"></span>, Designed by <a href="https://www.yve.life" target="_blank">yve.</a></p><!-- End: Copyright -->
                 </footer>
             </div><!-- End: Footer Wrapper -->
         </div><!-- End: Body Wrapper -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/script.min.js"></script>
+        <script>
+            document.getElementById("footerYear").innerText = new Date().getFullYear();
+        </script>
     </body>
 
 </html>
